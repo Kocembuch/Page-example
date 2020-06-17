@@ -1,0 +1,63 @@
+.popups {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 400px;
+    top: 0;
+    left: 55%;
+    height: 15vh;
+    border: 1px black solid;
+    padding: 20px 5px;
+    z-index: -1;
+    background-color: black;
+    // opacity: 0;
+    transition: 1s;
+
+    &__bulb {
+        color: #47ff00;
+        font-size: 3rem;
+        flex-basis: 10%;
+        text-align: center;
+        margin: auto;
+    }
+
+    &__input {
+        flex-basis: 50%;
+
+    }
+
+    &__neon {
+        flex-basis: 30%;
+        // letter-spacing: .5rem;
+        font-family: $font-kurale;
+        font-size: 3rem;
+        color: #47ff00;
+        text-shadow: rgba(255, 255, 255, 0.8) 0 0 calc(5 * $glow), #47ff00 0 0 calc(2 * $glow);
+        opacity: 1;
+        padding-left: 20px;
+        text-align: center;
+        margin: auto;
+    }
+
+    &.popupShow {
+        top: 0;
+        left: 77%;
+    }
+
+}
+
+.jazda {
+    animation: jazda 1s linear both;
+    animation-delay: .7s;
+}
+
+@keyframes jazda {
+    0% {
+        z-index: -1;
+    }
+
+    100% {
+        z-index: 2;
+        ;
+    }
+}

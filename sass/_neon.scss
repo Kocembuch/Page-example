@@ -1,0 +1,196 @@
+.baner ul {
+    margin: auto;
+    text-align: center;
+    padding-bottom: 3vh;
+    height: 100%;
+}
+
+.baner {
+    background-color: black;
+    width: 100%;
+    position: relative;
+}
+
+.baner li {
+    color: #47ff00;
+    display: inline-block;
+    font-size: 5rem;
+    font-family: $font-metal;
+    letter-spacing: 7px;
+    text-shadow: 0 0 50px white, 0 0 10px #47ff00;
+    animation: neonAll 5s infinite;
+}
+
+.baner li:nth-child(3) {
+    transform: rotate(15deg) translateY(4px);
+    animation: neon 3s infinite;
+}
+
+li.stop {
+    animation: none;
+}
+
+.baner li:nth-last-child(2),
+.baner li:nth-last-child(1) {
+    font-size: 3rem;
+    position: absolute;
+    left: 2%;
+    bottom: 5%;
+    animation: none;
+    transition: .2s;
+}
+
+.hide {
+    display: none;
+}
+
+.baner li:nth-last-child(1):hover,
+.baner li:nth-last-child(2):hover {
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+
+@keyframes neon {
+    0% {
+        opacity: 0
+    }
+
+    5% {
+        opacity: 1
+    }
+
+    15% {
+        opacity: .5
+    }
+
+    30% {
+        opacity: 1
+    }
+
+    35% {
+        opacity: 0
+    }
+
+    40% {
+        opacity: 1
+    }
+
+    42% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 0.5
+    }
+
+    52% {
+        opacity: 1
+    }
+
+    60% {
+        opacity: 0
+    }
+
+    70% {
+        opacity: 1
+    }
+
+    80% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes neonAll {
+    0% {
+        opacity: 0
+    }
+
+    5% {
+        opacity: 1
+    }
+
+    30% {
+        opacity: 1
+    }
+
+    31% {
+        opacity: 0
+    }
+
+    32% {
+        opacity: 0.2
+    }
+
+    34% {
+        opacity: 1
+    }
+
+    38% {
+        opacity: 0.8
+    }
+
+    39% {
+        opacity: 0
+    }
+
+    41% {
+        opacity: 0.5
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    53% {
+        opacity: 0
+    }
+
+    55% {
+        opacity: 1
+    }
+
+    57% {
+        opacity: 0
+    }
+
+    58% {
+        opacity: 1
+    }
+
+    59% {
+        opacity: .5
+    }
+
+    63% {
+        opacity: .2
+    }
+
+    65% {
+        opacity: 1
+    }
+
+    67% {
+        opacity: .5
+    }
+
+    69% {
+        opacity: 0
+    }
+
+    72% {
+        opacity: .5
+    }
+
+    74% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 1
+    }
+}

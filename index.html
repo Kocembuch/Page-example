@@ -7,16 +7,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Kurale&family=Raleway:ital,wght@0,400;1,600&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/810db769c4.js" crossorigin="anonymous"></script>
 
     <title>Webside example</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="wrapper">
         <div class="logo">
-            <img class="logo__image" src="assets/logo_PL.png" alt="">
+            <a href="index.html"><img class="logo__image" src="assets/logo_PL.png" alt=""></a>
         </div>
         <form action="/" class="search">
             <input type="text" class="search__input" placeholder="podaj szukajną frazę">
@@ -27,16 +28,43 @@
             <a class="settings__icon-link" href="#"><i class="fas fa-sliders-h"></i></a>
             <a class="settings__icon-link" href="#"><i class="fas fa-sliders-h"></i></a>
         </div>
+
         <nav class="menu">
             <ul class="menu__list">
-                <li class="menu__item"><a href="" class="menu__link">Home</a></li>
+                <li class="menu__item"><a href="" class="menu__link">About me</a></li>
                 <li class="menu__item"><a href="" class="menu__link">Adventures</a></li>
                 <li class="menu__item"><a href="" class="menu__link">Future</a></li>
-                <li class="menu__item"><a href="" class="menu__link">Go!</a></li>
+                <li class="menu__item"><a href="" class="menu__link">my cv</a></li>
             </ul>
+            <div class="menu__burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu__burgerMenu">
+                to jest rozwijane menu
+            </div>
         </nav>
+        <section class="baner">
+            <ul>
+                <li>S</li>
+                <li>Z</li>
+                <li>U</li>
+                <li>K</li>
+                <li>A</li>
+                <li>M</li>
+                <li> &nbsp;</li>
+                <li>P</li>
+                <li>R</li>
+                <li>A</li>
+                <li>C</li>
+                <li>Y</li>
+                <li><i class="far fa-stop-circle"></i></li>
+                <li><i class="far fa-play-circle hide"></i></li>
+            </ul>
+        </section>
         <section class="main-articles">
-            <h1 class="main-articles__intro">Najnowsze wpisy</h1>
+            <h1 class="main-articles__intro">Najnowsze projekty</h1>
             <article class="article">
                 <img src="https://placeimg.com/640/640/animals" alt="" class="article__image">
                 <h1 class="article__title">Nieskończona różnorodność fauny i flory</h1>
@@ -109,6 +137,17 @@
             </div>
         </footer>
     </div>
+
+    <section class="popups">
+        <div class="popups__bulb"><i class="fas fa-lightbulb"></i></div>
+        <input class="popups__input" type="range" min="0" max="100" value="0">
+        <div class="popups__neon"><span> 0</span>%</div>
+    </section>
+    <!-- <div class="night"></div> -->
+
+    <script src="js/hamburger.js"></script>
+    <script src="js/neon.js"></script>
+    <script src="js/popups.js"></script>
 </body>
 
 </html>

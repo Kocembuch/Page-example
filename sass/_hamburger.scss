@@ -1,0 +1,83 @@
+html {
+    overflow-x: hidden;
+}
+
+.menu__burger {
+    position: absolute;
+    top: 50%;
+    right: 3vh;
+    transform: translateY(-50%);
+    width: $burger-width;
+    height: $burger-height;
+    transition: .2s;
+
+    &:hover {
+        transform: translateY(-50%) scale(1.3);
+    }
+}
+
+.active {
+    transform: rotate(90deg);
+    transform: translateY(-50%);
+}
+
+.menu__burger span {
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    background-color: white;
+    left: 0;
+    transition: top .2s .2s, bottom .2s .2s, opacity 0.2s 0.2s, transform .2s .4s;
+}
+
+span:nth-child(1) {
+    top: 0;
+}
+
+.active span:nth-child(1) {
+    top: calc(50% - 3px);
+    transform: rotate(45deg);
+}
+
+span:nth-child(2) {
+    top: calc(50% - 3px);
+}
+
+.active span:nth-child(2) {
+    top: calc(50% - 3px);
+    opacity: 0;
+}
+
+span:nth-child(3) {
+    bottom: 0;
+}
+
+.active span:nth-child(3) {
+    bottom: calc(50% - 3px);
+    transform: rotate(-45deg);
+}
+
+.menu__burgerMenu {
+    position: absolute;
+    width: calc(100vw - $wrapper-width);
+    height: 0;
+    background-color: $color-other;
+    top: 30px;
+    opacity: 0;
+    transition: .5s;
+    top: calc(35px + 70%);
+    right: 1vw;
+    box-shadow: 0 0 4px 0 black;
+    z-index: 1;
+    color: black;
+    padding: 10px;
+}
+
+.show {
+    background-color: $color-light;
+    opacity: 1;
+    top: calc(35px + 70%);
+    right: 1vw;
+    height: 20vh;
+    opacity: .8;
+}

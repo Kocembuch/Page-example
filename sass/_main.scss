@@ -1,14 +1,3 @@
-$main-color: #8daae5;
-$color-light: #c9cd44;
-$color-dark: #7e9d26;
-$color-other: #EEA;
-$font-kurale: 'Kurale';
-$font-raleway: 'Raleway';
-$font-arch: 'Architects Daughter',
-cursive;
-$default-font: arial,
-sans-serif;
-
 * {
     margin: 0;
     padding: 0;
@@ -17,8 +6,14 @@ sans-serif;
 
 html {
     font-size: 10px;
-    background-color: $color-other;
+    // background-color: $color-other;
+    background-color: darken($color-other, 10);
+    // filter: brightness(var(--light));
     color: white;
+}
+
+body {
+    position: relative;
 }
 
 .wrapper {
@@ -28,7 +23,7 @@ html {
     flex-direction: row;
     align-content: flex-start;
     //pozycja i wielkość
-    max-width: 1000px;
+    max-width: $wrapper-width;
     min-height: 100vh;
     margin: 0 auto;
     //wygląd
@@ -44,6 +39,7 @@ html {
     &__image {
         width: 100%;
         display: block;
+        cursor: pointer;
     }
 }
 
@@ -100,10 +96,12 @@ html {
     align-items: center;
 
 
+
     @media (max-width: 799px) {
         flex-grow: 1;
         align-items: center;
         justify-content: flex-end;
+        transition: .2s;
     }
 
     &__icon-link {
@@ -112,17 +110,19 @@ html {
         color: black;
 
         &:hover {
-            color: black;
+            transform: scale(1.5);
         }
     }
 }
 
 .menu {
+    // overflow: hidden;
+    position: relative;
     display: inline;
     flex-basis: 100%;
     background-color: black;
     font-family: $font-arch;
-    padding: 15px 50px 15px 80px;
+    padding: 15px 70px 15px 30px;
 
     @media (max-width: 799px) {
         padding: 0;
@@ -134,7 +134,7 @@ html {
     }
 
     &__item {
-        margin: 0 20px;
+        margin: 0 30px;
         font-size: 2rem;
         text-transform: uppercase;
         line-height: 4rem;
@@ -150,7 +150,7 @@ html {
         }
 
         &:nth-last-child(1) {
-            margin-left: auto;
+            margin-left: 13vw;
             border: 2px solid #666;
 
             @media (max-width: 799px) {
