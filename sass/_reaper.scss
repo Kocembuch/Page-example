@@ -1,0 +1,11 @@
+svg {
+    overflow: auto;
+
+    &.reaper {
+        position: absolute;
+        width: auto;
+        height: 25vh;
+        top: 3vh;
+        left: -10vw;
+    }
+}

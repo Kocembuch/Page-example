@@ -42,16 +42,13 @@
     &.popupShow {
         top: 0;
         left: 77%;
+        animation: start 1s linear both;
+        animation-delay: .7s;
     }
 
 }
 
-.jazda {
-    animation: jazda 1s linear both;
-    animation-delay: .7s;
-}
-
-@keyframes jazda {
+@keyframes start {
     0% {
         z-index: -1;
     }

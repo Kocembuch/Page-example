@@ -9,7 +9,6 @@ const percent = document.querySelector(".popups__neon span");
 const givePop = () => {
     console.log('włączę settingi');
     popups.classList.toggle("popupShow");
-    popups.classList.toggle("jazda");
 
 }
 setIcon.addEventListener("click", givePop)
@@ -17,10 +16,11 @@ setIcon.addEventListener("click", givePop)
 
 // ustawienie zmiany zaciemnienia tła
 const changeLight = () => {
-    let quantity = input.value;
+    let quantity = parseInt(input.value, 10);
     percent.textContent = quantity;
-    document.documentElement.style.setProperty("--light", quantity);
+    document.documentElement.style.setProperty(`--light`, `${100 - quantity}%`);
     document.documentElement.style.setProperty("--glow", quantity + 'px');
+    document.body.style.filter.brightness = `10%`
 }
 
 input.addEventListener("change", changeLight);
